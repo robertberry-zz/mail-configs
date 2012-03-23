@@ -38,6 +38,22 @@ localfolders = ~/.mail/gmail
 type = Gmail
 remoteuser = rjberry
 
+[mbnames]
+# This populates a mailbox file for mutt to use.
+#
+
+enabled = yes
+filename = ~/.mail_configs/mutt/muttmailboxes
+header = "mailboxes "
+
+# Exclude from the list of mailboxes any folder matching the
+# regex below.  Works for all accounts
+folderfilter = lambda accountname, foldername: not re.search('(^bak.*|.*drafts$|.*spam$|.*sent$|.*trash$)', foldername)
+
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
+
 # Local variables:
 # mode: conf
 # End:

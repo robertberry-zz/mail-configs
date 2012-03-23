@@ -10,7 +10,6 @@ set spoolfile = +"uol/inbox"
 
 # other confs
 source ~/.mail_configs/mutt/common
-source ~/.mail_configs/mutt/colors
 
 # address book
 set alias_file=~/.mail_configs/mutt/aliases

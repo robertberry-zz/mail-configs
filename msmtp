@@ -1,0 +1,33 @@
+# -*- mode: conf-space; -*-
+
+# The following are default values for all accounts
+defaults
+tls on
+tls_starttls on
+auth on
+logfile ~/.msmtp.log
+syslog off
+
+account uol
+host mail1.liv.ac.uk
+port 25
+from robert.berry@liv.ac.uk
+# Assuming you don't have the certificate corresponding to
+# the one on your school smtp server, and you cannot obtain
+# it, the following may be necessary.
+#
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+#tls_starttls off
+#tls_certcheck off
+user rjberry
+password -my-password-here-
+
+account gmail
+host smtp.gmail.com          
+port 587                     
+from rjberry@gmail.com
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+user rjberry
+password -my-password-here
+
+account default : uol

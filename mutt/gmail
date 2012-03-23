@@ -7,7 +7,7 @@ unset signature
 
 # use msmtp to send outgoing mail to the mailserver
 # see ~/.msmtp for configuration
-set sendmail="/usr/bin/msmtp -C ~/.mail_configs/msmtp -a gmail"
+set sendmail="/usr/bin/msmtp -C /home/robert/.mail_configs/msmtp -a gmail"
 
 set from="rjberry@gmail.com"
 

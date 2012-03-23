@@ -1,6 +1,7 @@
 # Mail config
 
-Backup of my mail config files. Makes it easier for me to move between machines.
+Backup of my mail config files. Makes it easier for me to move between
+machines. I use offlineimap, msmtp, mutt, emacs.
 
 ## Thanks
 

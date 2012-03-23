@@ -43,7 +43,7 @@ set move=no
 #======================================================#
 # which editor do you want to use? 
 # emacs obviously
-set editor="emacs"
+set editor="emacs -nw"
 set edit_headers          # See the headers when editing
 
 #======================================================#
