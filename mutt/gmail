@@ -1,0 +1,15 @@
+# -*- mode: muttrc; -*-
+# Gmail information
+
+unset record 	# gmail does this automatically
+set postponed=+"gmail/bak.drafts"
+unset signature
+
+# use msmtp to send outgoing mail to the mailserver
+# see ~/.msmtp for configuration
+set sendmail="/usr/bin/msmtp -C ~/.mail_configs/msmtp -a gmail"
+
+set from="rjberry@gmail.com"
+
+# Thread yourself (hopefully)
+my_hdr bcc: rjberry@gmail.com

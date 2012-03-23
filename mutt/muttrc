@@ -1,0 +1,25 @@
+
+# root mail directory
+set folder = ~/.mail
+
+# list of mailboxes created by offlineimap
+source ~/.mail_configs/mutt/muttmailboxes
+
+# default inbox
+set spoolfile = +"uol/inbox"
+
+# other confs
+source ~/.mail_configs/mutt/common
+source ~/.mail_configs/mutt/colors
+
+# address book
+set alias_file=~/.mail_configs/mutt/aliases
+source $alias_file
+
+# If we are in any directory starting with the following, pull
+# specific settings for that account.
+folder-hook +uol/.* "source ~/.mail_configs/mutt/uol"
+folder-hook +gmail/.* "source ~/.mail_configs/mutt/gmail"
+
+# mail addresses
+alternates robert.berry@liv.ac.uk robert.berry@liverpool.ac.uk rjberry@gmail.com r.j.berry@gmail.com
