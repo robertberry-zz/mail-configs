@@ -1,0 +1,43 @@
+[general]
+# This should contain a comma delimited list of all identifiers of the accounts
+# that are to be synced
+#accounts = uol, gmail
+accounts = uol
+
+[Account uol]
+# The identifier for the local repository; e.g., the maildir that offlineimap
+# will sync with an IMAP server
+localrepository = uol-local
+# The identifier for the remote repository. This is the actual IMAP, which is
+# usually foreign to the system
+remoterepository = uol-remote
+
+[Account gmail]
+localrepository = gmail-local
+remoterepository = gmail-remote
+
+[Repository uol-local]
+# Currently, offlineimap only supports maildir and IMAP for local repositories
+type = Maildir
+# Where should the mail be placed?
+localfolders = ~/Maildir
+
+[Repository uol-remote]
+# Remote repos can be IMAP or Gmail, the latter being a preconfigured IMAP
+type = IMAP
+remotehost = imap.liv.ac.uk
+remoteport = 993
+remoteuser = rjberry
+ssl = yes
+
+[Repository gmail-local]
+type = Maildir
+localfolders = ~/Gmaildir
+
+[Repository gmail-remote]
+type = Gmail
+remoteuser = rjberry
+
+# Local variables:
+# mode: conf
+# End:
