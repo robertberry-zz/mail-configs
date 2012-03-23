@@ -1,8 +1,8 @@
 [general]
 # This should contain a comma delimited list of all identifiers of the accounts
 # that are to be synced
-#accounts = uol, gmail
-accounts = uol
+accounts = uol, gmail
+#accounts = uol
 
 [Account uol]
 # The identifier for the local repository; e.g., the maildir that offlineimap
@@ -20,7 +20,7 @@ remoterepository = gmail-remote
 # Currently, offlineimap only supports maildir and IMAP for local repositories
 type = Maildir
 # Where should the mail be placed?
-localfolders = ~/Maildir
+localfolders = ~/.mail/uol
 
 [Repository uol-remote]
 # Remote repos can be IMAP or Gmail, the latter being a preconfigured IMAP
@@ -32,7 +32,7 @@ ssl = yes
 
 [Repository gmail-local]
 type = Maildir
-localfolders = ~/Gmaildir
+localfolders = ~/.mail/gmail
 
 [Repository gmail-remote]
 type = Gmail
